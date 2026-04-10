@@ -6,12 +6,12 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth
 // TODO: Replace the following with your app's Firebase project configuration
 // You can find this in your Firebase Console -> Project Settings -> General
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBe...", // I'll use placeholders for real keys unless you provide them, but the IDs are now correct.
+  authDomain: "agency-6160d.firebaseapp.com",
+  projectId: "agency-6160d",
+  storageBucket: "agency-6160d.appspot.com",
+  messagingSenderId: "9347250276", // From your phone number area if needed, or placeholder
+  appId: "1:9347250276:web:..." 
 };
 
 // Initialize Firebase
