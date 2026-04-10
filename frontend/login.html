@@ -217,7 +217,10 @@
   </div>
 
   <script src="/static/js/main.js"></script>
-  <script>
+  <script type="module">
+    import { auth } from "/static/js/firebase-config.js";
+    import { signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+
     const loginSec = document.getElementById('login-section');
     const forgotSec = document.getElementById('forgot-section');
     const resetSec = document.getElementById('reset-section');
@@ -235,37 +238,32 @@
       loginSec.style.display = 'block';
     });
 
-    // Handle Login
+    // Handle Login with Firebase
     document.getElementById('login-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const errorDiv = document.getElementById('auth-error');
+      
       errorDiv.style.display = 'none';
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Verifying...';
+      btn.disabled = true;
+
       try {
-        const res = await fetch('/auth/user/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password })
-        });
-        const data = await res.json();
-        if (res.ok && data.success) {
-          const urlParams = new URLSearchParams(window.location.search);
-          let redirect = urlParams.get('redirect') || '/';
-          if (!redirect.startsWith('/')) redirect = '/' + redirect;
-          window.location.href = redirect;
-        } else {
-          errorDiv.textContent = data.error || 'Login failed. Please try again.';
-          errorDiv.style.display = 'block';
-        }
+        await signInWithEmailAndPassword(auth, email, password);
+        // Successful login
+        window.location.href = '/';
       } catch (err) {
-        errorDiv.textContent = 'Network error occurred';
+        btn.textContent = 'Log In';
+        btn.disabled = false;
+        errorDiv.textContent = 'Invalid email or password. Please try again.';
         errorDiv.style.display = 'block';
+        console.error("Auth Error:", err.code, err.message);
       }
     });
 
-    // Handle Forgot Password (Send OTP)
-    let resetEmailCache = '';
+    // Handle Forgot Password with Firebase
     document.getElementById('forgot-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = document.getElementById('forgot-email').value;
@@ -277,72 +275,17 @@
       submitBtn.disabled = true;
       
       try {
-        const res = await fetch('/auth/forgot-password', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email })
-        });
-        const data = await res.json();
-        submitBtn.textContent = 'Send OTP';
-        submitBtn.disabled = false;
-        
-        if (res.ok) {
-          if (data.dev_otp) {
-            const errDiv = document.getElementById('reset-error');
-            errDiv.textContent = 'DEV SERVER: Your OTP is ' + data.dev_otp;
-            errDiv.style.display = 'block';
-            errDiv.style.color = '#c8ff00';
-            errDiv.style.background = 'rgba(200,255,0,0.1)';
-            errDiv.style.borderColor = 'rgba(200,255,0,0.3)';
-          }
-          resetEmailCache = email;
-          forgotSec.style.display = 'none';
-          resetSec.style.display = 'block';
-        } else {
-          errorDiv.textContent = data.error || 'Failed to send OTP.';
-          errorDiv.style.display = 'block';
-        }
-      } catch (err) {
-        submitBtn.textContent = 'Send OTP';
-        submitBtn.disabled = false;
-        errorDiv.textContent = 'Network error occurred';
+        await sendPasswordResetEmail(auth, email);
+        submitBtn.textContent = 'Check Your Email';
+        errorDiv.textContent = 'A reset link has been sent to your inbox.';
         errorDiv.style.display = 'block';
-      }
-    });
-
-    // Handle Reset Password
-    document.getElementById('reset-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const otp = document.getElementById('reset-otp').value;
-      const new_password = document.getElementById('new-password').value;
-      const errorDiv = document.getElementById('reset-error');
-      errorDiv.style.display = 'none';
-      
-      try {
-        const res = await fetch('/auth/reset-password', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: resetEmailCache, otp, new_password })
-        });
-        const data = await res.json();
-        if (res.ok && data.success) {
-          const authErrDiv = document.getElementById('auth-error');
-          authErrDiv.textContent = 'Password reset successfully. You can now log in.';
-          authErrDiv.style.display = 'block';
-          authErrDiv.style.color = '#c8ff00';
-          authErrDiv.style.background = 'rgba(200,255,0,0.1)';
-          authErrDiv.style.borderColor = 'rgba(200,255,0,0.3)';
-          
-          resetSec.style.display = 'none';
-          loginSec.style.display = 'block';
-          document.getElementById('login-form').reset();
-          document.getElementById('email').value = resetEmailCache;
-        } else {
-          errorDiv.textContent = data.error || 'Failed to reset password.';
-          errorDiv.style.display = 'block';
-        }
+        errorDiv.style.color = 'var(--accent)';
+        errorDiv.style.background = 'rgba(200,255,0,0.1)';
+        errorDiv.style.borderColor = 'rgba(200,255,0,0.3)';
       } catch (err) {
-        errorDiv.textContent = 'Network error occurred';
+        submitBtn.textContent = 'Send Reset Link';
+        submitBtn.disabled = false;
+        errorDiv.textContent = 'Error: ' + err.message;
         errorDiv.style.display = 'block';
       }
     });

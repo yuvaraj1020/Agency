@@ -59,7 +59,10 @@
   </div>
 
   <script src="/static/js/main.js"></script>
-  <script>
+  <script type="module">
+    import { auth, db, collection, addDoc, serverTimestamp } from "/static/js/firebase-config.js";
+    import { createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+
     document.getElementById('register-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = document.getElementById('name').value;
@@ -67,40 +70,44 @@
       const password = document.getElementById('password').value;
       const errorDiv = document.getElementById('auth-error');
       
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Creating Account...';
+      btn.disabled = true;
+
       try {
-        const res = await fetch('/auth/user/register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, password })
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+
+        // Update profile with name
+        await updateProfile(user, { displayName: name });
+
+        // Store additional user data in Firestore
+        await addDoc(collection(db, "clients"), {
+          uid: user.uid,
+          name: name,
+          email: email,
+          created_at: serverTimestamp()
         });
-        const data = await res.json();
-        
-        if (res.ok && data.success) {
-          // Redirect to contact page after registration (which logs them in)
-          window.location.href = '/contact.html';
-        } else {
-          errorDiv.textContent = data.error || 'Registration failed';
-          errorDiv.style.display = 'block';
-        }
+
+        // Redirect to home
+        window.location.href = '/';
       } catch (err) {
-        errorDiv.textContent = 'Network error occurred';
+        btn.textContent = 'Sign Up';
+        btn.disabled = false;
+        errorDiv.textContent = 'Error: ' + err.message;
         errorDiv.style.display = 'block';
       }
     });
-  </script>
-  <script>
-    // Authentication Check and Dynamic Navbar Update
-    fetch('/auth/me')
-      .then(res => res.json())
-      .then(data => {
-        const btn = document.getElementById('nav-login-btn');
-        if (data.authenticated) {
-          if (btn) {
-            btn.textContent = 'Logout';
-            btn.href = (data.type === 'admin') ? '/auth/logout' : '/auth/user/logout';
-          }
-        }
-      });
+
+    // Simple Auth Observer for Nav (Optional here but good for consistency)
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    onAuthStateChanged(auth, (user) => {
+      const btn = document.getElementById('nav-login-btn');
+      if (user && btn) {
+        btn.textContent = 'Dashboard';
+        btn.href = '/admin-dashboard/dashboard.html'; // In a real app, check roles
+      }
+    });
   </script>
 </body>
 </html>

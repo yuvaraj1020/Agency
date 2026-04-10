@@ -76,11 +76,11 @@
         tbody.innerHTML = leads.map((r, i) => `
           <tr>
             <td style="color:var(--gray-4);">${i + 1}</td>
-            <td>${r.name}</td>
-            <td style="color:var(--gray-4);">${r.email}</td>
-            <td>${r.service_interested}</td>
-            <td><span class="badge badge-${r.status === 'New' ? 'new' : 'progress'}">${r.status}</span></td>
-            <td style="color:var(--gray-4);">${r.created_at?.toDate().toLocaleDateString('en-IN') || '—'}</td>
+            <td>${r.name || 'Anonymous'}</td>
+            <td style="color:var(--gray-4);">${r.email || '—'}</td>
+            <td>${r.service_interested || 'General Inquiry'}</td>
+            <td><span class="badge badge-${(r.status || 'New') === 'New' ? 'new' : 'progress'}">${r.status || 'New'}</span></td>
+            <td style="color:var(--gray-4);">${r.created_at ? r.created_at.toDate().toLocaleDateString('en-IN') : 'Just now'}</td>
             <td>
               <button class="delete-btn" data-id="${r.id}" style="background:transparent;border:none;color:#ff5050;cursor:pointer;font-family:var(--font-mono);text-transform:uppercase;font-size:0.6rem;">Delete</button>
             </td>

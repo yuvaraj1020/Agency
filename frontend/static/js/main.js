@@ -101,6 +101,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
   counters.forEach(c => counterObserver.observe(c));
 
+  // ── Instant Inspiration Quotes ──
+  const quotes = [
+    "Great brands are built through bold ideas and powerful storytelling.",
+    "Design is the silent ambassador of your brand.",
+    "Innovation distinguishes between a leader and a follower.",
+    "Creativity is intelligence having fun.",
+    "Good marketing makes the company look smart. Great marketing makes the customer feel smart."
+  ];
+  const quoteEl = document.getElementById('dynamic-quote');
+  if (quoteEl) {
+    quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+  }
+
   // ── Marquee duplicate ──
   const track = document.querySelector('.marquee-track');
   if (track) {
