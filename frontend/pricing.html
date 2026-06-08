@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Digital Marketing Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/responsive.css" />
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <div class="nav-mobile">
+    <button class="nav-mobile-close">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">Studio</a>
+    <a href="portfolio.html">Works</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Digital Marketing Agency<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">Studio</a></li>
+      <li><a href="portfolio.html">Works</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+    </ul>
+    <div class="nav-actions" style="display:flex; gap:1.5rem; align-items:center;">
+      <a id="nav-login-btn" href="login.html" style="font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); text-decoration:none; transition:color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--white)'">Login</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-bg"></div>
+    <div class="page-header-grid"></div>
+    <div class="page-header-content">
+      <div class="section-label">[ PRICING ]</div>
+      <h1 class="section-title" style="font-size:clamp(4rem,9vw,10rem);">Simple pricing.</h1>
+      <p class="section-sub">Affordable, transparent pricing for portfolios and resumes. No hidden fees, no surprises.</p>
+    </div>
+  </div>
+
+  <!-- Core Services Pricing — FIX 5 -->
+  <section>
+    <div class="section-label reveal">[ CORE SERVICES — 50% OFF ]</div>
+    <h2 class="section-title reveal reveal-delay-1">Portfolio &amp; Resume.<br>Built for you.</h2>
+    <p class="section-sub reveal" style="max-width:600px;margin-top:1rem;">Limited time offer — get our most popular services at half the original price. No hidden fees, delivered on time.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:4rem;">
+      <!-- ATS Resume -->
+      <div class="pricing-card reveal" style="position:relative;overflow:hidden;">
+        <div style="position:absolute;top:1.5rem;right:1.5rem;background:var(--accent);color:var(--black);font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;font-weight:700;padding:0.3rem 0.8rem;">50% OFF</div>
+        <div class="pricing-badge">Best Value</div>
+        <h3 class="pricing-name">ATS Resume</h3>
+        <p style="font-family:var(--font-mono);font-size:0.85rem;color:var(--gray-4);margin-bottom:0.3rem;">
+          <span style="text-decoration:line-through;color:var(--gray-3);margin-right:0.5rem;">₹1,000</span>
+          <span style="font-family:var(--font-display);font-size:2.5rem;color:var(--white);line-height:1;">₹500</span>
+          <span style="font-size:0.8rem;color:var(--gray-4);margin-left:0.4rem;">/ one-time</span>
+        </p>
+        <p class="pricing-desc" style="margin-top:1rem;">A professionally written, ATS-optimised resume that passes screening bots and impresses real recruiters. Perfect for freshers and experienced professionals.</p>
+        <hr style="border:none;border-top:1px solid rgba(245,240,232,0.08);margin:1.5rem 0;" />
+        <ul class="pricing-features">
+          <li>ATS-compliant format (no tables/images)</li>
+          <li>Keyword-optimised for your target role</li>
+          <li>Clean, modern design template</li>
+          <li>PDF &amp; editable Word file</li>
+          <li>1 round of revisions included</li>
+          <li>Delivered in 24–48 hours</li>
+        </ul>
+        <a href="contact.html" class="btn-pricing">Order Resume →</a>
+      </div>
+      <!-- Portfolio Website -->
+      <div class="pricing-card featured reveal reveal-delay-1" style="position:relative;overflow:hidden;">
+        <div style="position:absolute;top:1.5rem;right:1.5rem;background:var(--black);color:var(--accent);font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;font-weight:700;padding:0.3rem 0.8rem;">50% OFF</div>
+        <div class="pricing-badge">Flagship Service</div>
+        <h3 class="pricing-name">Portfolio Website</h3>
+        <p style="font-family:var(--font-mono);font-size:0.85rem;color:rgba(0,0,0,0.5);margin-bottom:0.3rem;">
+          <span style="text-decoration:line-through;color:rgba(0,0,0,0.35);margin-right:0.5rem;">₹2,000</span>
+          <span style="font-family:var(--font-display);font-size:2.5rem;color:var(--black);line-height:1;">₹1,000</span>
+          <span style="font-size:0.8rem;color:rgba(0,0,0,0.5);margin-left:0.4rem;">/ one-time</span>
+        </p>
+        <p class="pricing-desc" style="margin-top:1rem;">A stunning personal portfolio website that showcases your projects, skills, and personality — handcrafted from scratch, fully mobile-responsive, yours for life.</p>
+        <hr style="border:none;border-top:1px solid rgba(0,0,0,0.15);margin:1.5rem 0;" />
+        <ul class="pricing-features">
+          <li>Custom-designed from scratch</li>
+          <li>Mobile &amp; desktop responsive</li>
+          <li>Projects, skills &amp; contact sections</li>
+          <li>Fast load times and clean code</li>
+          <li>2 rounds of revisions included</li>
+          <li>Delivered in 3–7 days</li>
+        </ul>
+        <a href="contact.html" class="btn-pricing">Order Portfolio →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Other Services Pricing -->
+  <section>
+    <div class="section-label reveal">[ OTHER SERVICES ]</div>
+    <h2 class="section-title reveal reveal-delay-1">Additional packages.<br>Custom built.</h2>
+    <div class="pricing-grid" style="margin-top:4rem;">
+      <div class="pricing-card reveal">
+        <div class="pricing-badge">Starts at ₹25,000 / project</div>
+        <h3 class="pricing-name">Starter</h3>
+        <p class="pricing-price">One-time project</p>
+        <p class="pricing-desc">Ideal for startups and small businesses launching or refreshing their digital presence.</p>
+        <ul class="pricing-features">
+          <li>1 core service (web, video, or brand)</li>
+          <li>Fixed timeline &amp; deliverables</li>
+          <li>Unlimited revisions</li>
+          <li>2 weeks post-launch support</li>
+          <li>Ideal for 2–4 week projects</li>
+        </ul>
+        <a href="contact.html" class="btn-pricing">Get in touch</a>
+      </div>
+      <div class="pricing-card featured reveal reveal-delay-1">
+        <div class="pricing-badge">Starts at ₹50,000 / month</div>
+        <h3 class="pricing-name">Growth</h3>
+        <p class="pricing-price">Monthly retainer</p>
+        <p class="pricing-desc">For brands that need consistent creative and marketing support to scale month over month.</p>
+        <ul class="pricing-features">
+          <li>Up to 3 services included</li>
+          <li>Dedicated account manager</li>
+          <li>Priority turnaround</li>
+          <li>Weekly check-ins &amp; reporting</li>
+          <li>Slack / WhatsApp communication</li>
+          <li>Pause anytime</li>
+        </ul>
+        <a href="contact.html" class="btn-pricing">Get in touch</a>
+      </div>
+      <div class="pricing-card reveal reveal-delay-2">
+        <div class="pricing-badge">Custom Pricing</div>
+        <h3 class="pricing-name">Enterprise</h3>
+        <p class="pricing-price">Fully custom scope</p>
+        <p class="pricing-desc">For established brands that need a full-service digital partner with deep integration into their team.</p>
+        <ul class="pricing-features">
+          <li>All 6 services available</li>
+          <li>Dedicated full team</li>
+          <li>Custom SLAs &amp; reporting</li>
+          <li>Brand strategy workshops</li>
+          <li>Quarterly growth reviews</li>
+        </ul>
+        <a href="contact.html" class="btn-pricing">Book a call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section style="background:var(--gray-1);">
+    <div class="section-label reveal">[ WHY PICK US ]</div>
+    <h2 class="section-title reveal reveal-delay-1">What's included, always.</h2>
+    <div class="process-grid" style="margin-top:4rem;">
+      <div class="process-step reveal">
+        <div class="process-step-label">[ COMMUNICATION ]</div>
+        <h4>Quick Response</h4>
+        <p>We respond within hours, not days. You'll always know the status of your project without chasing us.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="process-step-label">[ TEAM ]</div>
+        <h4>Dedicated Team</h4>
+        <p>Work with the same creatives every time — no handoffs, no re-explaining, no friction.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="process-step-label">[ FLEXIBILITY ]</div>
+        <h4>Pause Anytime</h4>
+        <p>On retainer plans, pause your subscription any month. No lock-ins, no penalties, no stress.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="section-label">[ CUSTOM QUOTE ]</div>
+    <h2 class="section-title">Order today.</h2>
+    <p>Tell us what you need — resume, portfolio, or both — and we'll get started within hours.</p>
+    <a href="contact.html" class="btn-dark">Get started →</a>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Digital Marketing Agency<span style="color:var(--accent);">.</span></a>
+        <p>Portfolio & Resume Building Experts. Get hired faster.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="about.html">Studio</a></li>
+          <li><a href="portfolio.html">Works</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="../services/web-development.html">Web Development</a></li>
+          <li><a href="../services/social-media-marketing.html">Social Media</a></li>
+          <li><a href="../services/ads-management.html">Ads Management</a></li>
+          <li><a href="../services/video-editing.html">Video Editing</a></li>
+          <li><a href="../services/graphic-design.html">Graphic Design</a></li>
+          <li><a href="../services/marketing-strategy.html">Strategy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="mailto:hello@digitalmarketingagency.com">hello@digitalmarketingagency.com</a></li>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Digital Marketing Agency 2025</span>
+      <a href="index.html">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/animations.js"></script>
+  <script>
+    // Authentication Check and Dynamic Navbar Update
+    fetch('/auth/me', { credentials: 'include' })
+      .then(res => res.json())
+      .then(data => {
+        const btn = document.getElementById('nav-login-btn');
+        if (data.authenticated) {
+          if (btn) {
+            btn.textContent = 'Logout';
+            btn.href = (data.type === 'admin') ? '/auth/logout' : '/auth/user/logout';
+          }
+        }
+      });
+  </script>
+</body>
+</html>

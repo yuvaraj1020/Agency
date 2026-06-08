@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: dma-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FLASK_ENV
+        value: production
+      - key: DEBUG
+        value: "False"
+      # Set ALLOWED_ORIGINS to your Vercel frontend URL after deployment
+      - key: ALLOWED_ORIGINS
+        value: https://your-frontend.vercel.app

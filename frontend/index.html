@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Marketing Agency — Portfolio & Resume Building Experts</title>
+  <meta name="description" content="Digital Marketing Agency — We craft stunning portfolios and ATS-optimised resumes that get you noticed and hired faster." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/responsive.css" />
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile">
+    <button class="nav-mobile-close">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">Studio</a>
+    <a href="portfolio.html">Works</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <a href="index.html" class="nav-logo">Digital Marketing Agency<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">Studio</a></li>
+      <li><a href="portfolio.html">Works</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+    </ul>
+    <div class="nav-actions" style="display:flex; gap:1.5rem; align-items:center;">
+      <a id="nav-login-btn" href="login.html" style="font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); text-decoration:none; transition:color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--white)'">Login</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-year">©2025</div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-eyebrow">EST 2020 — Portfolio & Resume Experts</div>
+        <h1 class="hero-title">
+          DMA<br>
+          Fans<br>
+          <span class="line-accent">Digital.</span>
+        </h1>
+        <div class="hero-bottom">
+          <div class="hero-tagline-block">
+            <p class="hero-tagline">We build Portfolios & Resumes that get you hired. ATS-ready and recruiter-approved.</p>
+            <ul class="hero-services">
+              <li><span>•</span>Web UI Design — Clean, modern, and responsive user interface designs.</li>
+              <li><span>•</span>Web Development — High-performance, scalable websites built with modern technologies.</li>
+            </ul>
+          </div>
+          <div class="hero-actions">
+            <a href="portfolio.html" class="btn-primary">View our work →</a>
+            <a href="contact.html" class="btn-ghost">Order now</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <!-- FIX 1: Restored original stats panel style -->
+        <div class="hero-quote-container" style="margin-bottom:2rem; padding:1.5rem; border-left:4px solid var(--accent); background:rgba(0,0,0,0.6); border-radius:4px; backdrop-filter:blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <p id="dynamic-quote" style="font-family:var(--font-mono); font-size:0.95rem; line-height:1.6; color:var(--white); font-style:italic;">Loading inspiration...</p>
+        </div>
+        <div class="hero-stats-panel" style="background:rgba(26,26,26,0.8); border:1px solid rgba(245,240,232,0.1); padding:2rem; border-radius:8px; backdrop-filter:blur(10px);">
+          <h3 style="font-family:var(--font-display); font-size:2rem; letter-spacing:0.02em; margin-bottom:0.5rem; color:var(--white);">Your career, crafted perfectly.</h3>
+          <p style="font-size:0.9rem; color:var(--gray-4); line-height:1.6; margin-bottom:1.5rem;">We build stunning portfolios and ATS-optimised resumes that pass screening bots and impress human recruiters — giving your career the launchpad it deserves.</p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; padding-bottom:1.5rem; border-bottom:1px solid rgba(245,240,232,0.1); margin-bottom:1.5rem;">
+            <div>
+              <div style="font-family:var(--font-display); font-size:2.5rem; line-height:1; color:var(--accent);">500+</div>
+              <div style="font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.1em; color:var(--gray-4); margin-top:0.4rem; text-transform:uppercase;">Projects Delivered</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-display); font-size:2.5rem; line-height:1; color:var(--accent);">99%</div>
+              <div style="font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.1em; color:var(--gray-4); margin-top:0.4rem; text-transform:uppercase;">Client Satisfaction</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-display); font-size:2.5rem; line-height:1; color:var(--accent);">24h</div>
+              <div style="font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.1em; color:var(--gray-4); margin-top:0.4rem; text-transform:uppercase;">Avg Response Time</div>
+            </div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="width:100%; justify-content:center;">Get your free proposal ⚡</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="dot"></span>Portfolio Design</span>
+      <span class="marquee-item"><span class="dot"></span>ATS Resume</span>
+      <span class="marquee-item"><span class="dot"></span>Social Media Marketing</span>
+      <span class="marquee-item"><span class="dot"></span>Ads Management</span>
+      <span class="marquee-item"><span class="dot"></span>Graphic Design</span>
+      <span class="marquee-item"><span class="dot"></span>Marketing Strategy</span>
+      <span class="marquee-item"><span class="dot"></span>LinkedIn Optimisation</span>
+      <span class="marquee-item"><span class="dot"></span>Get Hired Faster</span>
+      <span class="marquee-item"><span class="dot"></span>Portfolio Design</span>
+      <span class="marquee-item"><span class="dot"></span>ATS Resume</span>
+      <span class="marquee-item"><span class="dot"></span>Social Media Marketing</span>
+      <span class="marquee-item"><span class="dot"></span>Ads Management</span>
+      <span class="marquee-item"><span class="dot"></span>Graphic Design</span>
+      <span class="marquee-item"><span class="dot"></span>Marketing Strategy</span>
+      <span class="marquee-item"><span class="dot"></span>LinkedIn Optimisation</span>
+      <span class="marquee-item"><span class="dot"></span>Get Hired Faster</span>
+    </div>
+  </div>
+
+  <!-- FIX 2: Pricing banner with strikethrough + 50% off -->
+  <section style="padding:5rem 3rem; background:var(--gray-1); border-bottom:var(--border);">
+    <div class="section-label reveal" style="margin-bottom:2rem;">[ SPECIAL LAUNCH OFFER — 50% OFF ]</div>
+    <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:1rem;">Grab our services.<br>At half the price.</h2>
+    <p class="section-sub reveal reveal-delay-2" style="margin-bottom:3rem;">Limited time offer — get professional-grade portfolio websites and ATS resumes at 50% off the original price.</p>
+    <div style="display:grid; grid-template-columns:repeat(4,minmax(240px,1fr)); gap:1rem; max-width:1600px; width:100%;">
+      <!-- ATS Resume Card -->
+      <div style="background:var(--black); border:1px solid rgba(200,255,0,0.25); padding:3rem; position:relative; overflow:hidden;">
+        <div style="position:absolute;top:1.5rem;right:1.5rem; background:var(--accent); color:var(--black); font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.1em; font-weight:700; padding:0.3rem 0.7rem;">50% OFF</div>
+        <div style="font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gray-4); margin-bottom:1.2rem;">BEST VALUE</div>
+        <div style="font-family:var(--font-display); font-size:2.5rem; color:var(--white); letter-spacing:0.02em; margin-bottom:0.8rem;">ATS RESUME</div>
+        <div style="margin-bottom:1rem;">
+          <span class="price-original">₹1,000</span>
+          <span style="font-family:var(--font-display); font-size:3rem; color:var(--accent); line-height:1;">₹500</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--gray-4); margin-left:0.5rem;">/ one-time</span>
+        </div>
+        <p style="font-size:0.85rem; color:var(--gray-4); line-height:1.65; margin-bottom:1.5rem;">ATS-compliant resume, keyword-optimised for your target role. Delivered in 24–48 hours.</p>
+        <a href="contact.html" class="btn-primary" style="width:100%; justify-content:center;">Order Resume →</a>
+      </div>
+      <!-- Portfolio Card -->
+      <div style="background:var(--accent); padding:3rem; position:relative; overflow:hidden;">
+        <div style="position:absolute;top:1.5rem;right:1.5rem; background:var(--black); color:var(--accent); font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.1em; font-weight:700; padding:0.3rem 0.7rem;">50% OFF</div>
+        <div style="font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(0,0,0,0.5); margin-bottom:1.2rem;">FLAGSHIP</div>
+        <div style="font-family:var(--font-display); font-size:2.5rem; color:var(--black); letter-spacing:0.02em; margin-bottom:0.8rem;">PORTFOLIO</div>
+        <div style="margin-bottom:1rem;">
+          <span style="text-decoration:line-through; color:rgba(0,0,0,0.4); font-size:0.85em; margin-right:0.4rem;">₹2,000</span>
+          <span style="font-family:var(--font-display); font-size:3rem; color:var(--black); line-height:1;">₹1,000</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem; color:rgba(0,0,0,0.5); margin-left:0.5rem;">/ one-time</span>
+        </div>
+        <p style="font-size:0.85rem; color:rgba(0,0,0,0.65); line-height:1.65; margin-bottom:1.5rem;">Custom portfolio website, mobile-responsive, built from scratch. Delivered in 3–7 days.</p>
+        <a href="contact.html" style="display:flex;justify-content:center;align-items:center;width:100%; font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; background:var(--black); color:var(--white); padding:1rem; text-decoration:none; transition:background 0.3s;" onmouseover="this.style.background='#1a1a1a'" onmouseout="this.style.background='var(--black)'">Order Portfolio →</a>
+      </div>
+      <!-- UI Design Card -->
+      <div style="background:var(--black); border:1px solid rgba(200,255,0,0.25); padding:3rem; position:relative; overflow:hidden;">
+        <div style="position:absolute;top:1.5rem;right:1.5rem; background:var(--accent); color:var(--black); font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.1em; font-weight:700; padding:0.3rem 0.7rem;">50% OFF</div>
+        <div style="font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gray-4); margin-bottom:1.2rem;">WORK OF MINE</div>
+        <div style="font-family:var(--font-display); font-size:2.5rem; color:var(--white); letter-spacing:0.02em; margin-bottom:0.8rem;">UI DESIGN</div>
+        <div style="margin-bottom:1rem;">
+          <span style="text-decoration:line-through; color:rgba(255,255,255,0.45); font-size:0.85em; margin-right:0.4rem;">₹10,000</span>
+          <span style="font-family:var(--font-display); font-size:3rem; color:var(--accent); line-height:1;">₹5,000</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--gray-4); margin-left:0.5rem;">/ one-time</span>
+        </div>
+        <p style="font-size:0.85rem; color:var(--gray-4); line-height:1.65; margin-bottom:1.5rem;">UI design work from my portfolio — clean, pixel-perfect screens and modern user interfaces. Delivered in 5–7 days.</p>
+        <a href="contact.html" class="btn-primary" style="width:100%; justify-content:center;">Order UI Design →</a>
+      </div>
+      <!-- Web UI + Development Card -->
+      <div style="background:var(--accent); padding:3rem; position:relative; overflow:hidden;">
+        <div style="position:absolute;top:1.5rem;right:1.5rem; background:var(--black); color:var(--accent); font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.1em; font-weight:700; padding:0.3rem 0.7rem;">50% OFF</div>
+        <div style="font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(0,0,0,0.5); margin-bottom:1.2rem;">NEW PACKAGE</div>
+        <div style="font-family:var(--font-display); font-size:2.5rem; color:var(--black); letter-spacing:0.02em; margin-bottom:0.8rem;">Web UI + Development</div>
+        <div style="margin-bottom:1rem;">
+          <span style="text-decoration:line-through; color:rgba(0,0,0,0.4); font-size:0.85em; margin-right:0.4rem;">₹20,000</span>
+          <span style="font-family:var(--font-display); font-size:3rem; color:var(--black); line-height:1;">₹10,000</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem; color:rgba(0,0,0,0.5); margin-left:0.5rem;">/ one-time</span>
+        </div>
+        <p style="font-size:0.85rem; color:rgba(0,0,0,0.65); line-height:1.65; margin-bottom:1.5rem;">Complete web UI and development package — responsive landing page, modern interactions, and clean frontend build. Delivered in 7–10 days.</p>
+        <a href="contact.html" style="display:flex;justify-content:center;align-items:center;width:100%; font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; background:var(--black); color:var(--white); padding:1rem; text-decoration:none; transition:background 0.3s;" onmouseover="this.style.background='#1a1a1a'" onmouseout="this.style.background='var(--black)'">Order Web UI + Dev →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="studio">
+    <div class="section-label reveal">[ ABOUT ]</div>
+    <h2 class="section-title reveal reveal-delay-1">Who we are.</h2>
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <img src="/static/images/team.jpg" alt="Digital Marketing Agency Team" onerror="this.style.background='#1a1a1a';this.style.aspectRatio='4/5';this.removeAttribute('src');" />
+      </div>
+      <div class="about-text reveal reveal-delay-1">
+        <h3>We're not here to blend in. We craft portfolios and resumes that get people hired.</h3>
+        <p class="section-sub">At Digital Marketing Agency, we specialise in building professional portfolios and ATS-optimised resumes for students, freshers, and working professionals across India.</p>
+        <ul class="about-list">
+          <li>Custom portfolio websites built from scratch</li>
+          <li>ATS-friendly resumes that pass screening bots</li>
+          <li>Personal branding & LinkedIn profile optimisation</li>
+          <li>Affordable pricing — ₹500 resume, ₹1000 portfolio</li>
+          <li>Social media, ads, design & marketing services too</li>
+          <li>Dedicated team, real results</li>
+        </ul>
+        <br />
+        <a href="about.html" class="btn-ghost" style="display:inline-flex;margin-top:1rem;">Our story →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" style="padding-top:0;">
+    <div class="section-label reveal">[ SERVICES ]</div>
+    <h2 class="section-title reveal reveal-delay-1">What we do.</h2>
+    <div class="services-grid reveal">
+      <div class="service-item">
+        <span class="service-num">[01]</span>
+        <div class="service-body">
+          <h3 class="service-name">Portfolio Website</h3>
+          <p class="service-desc">A stunning personal portfolio website that showcases your projects, skills, and experience — handcrafted for maximum impact. Starting at ₹1,000.</p>
+          <div class="service-tags">
+            <span>Custom Design</span><span>Mobile Ready</span><span>Fast Delivery</span><span>Hosted</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-item">
+        <span class="service-num">[02]</span>
+        <div class="service-body">
+          <h3 class="service-name">ATS Resume</h3>
+          <p class="service-desc">Professionally written, ATS-optimised resumes crafted to pass screening systems and impress recruiters at top companies. Starting at ₹500.</p>
+          <div class="service-tags">
+            <span>ATS-Friendly</span><span>Keyword Optimised</span><span>Fresher / Exp.</span><span>PDF Ready</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-item">
+        <span class="service-num">[03]</span>
+        <div class="service-body">
+          <h3 class="service-name">Social Media Marketing</h3>
+          <p class="service-desc">Content strategies and community management that grow your audience and build brand loyalty — from Instagram to LinkedIn.</p>
+          <div class="service-tags">
+            <span>Instagram</span><span>LinkedIn</span><span>TikTok</span><span>Strategy</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-item">
+        <span class="service-num">[04]</span>
+        <div class="service-body">
+          <h3 class="service-name">Ads Management</h3>
+          <p class="service-desc">Data-driven paid campaigns across Google, Meta, and beyond — maximising ROI at every rupee spent on your business.</p>
+          <div class="service-tags">
+            <span>Google Ads</span><span>Meta Ads</span><span>Retargeting</span><span>Analytics</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-item">
+        <span class="service-num">[05]</span>
+        <div class="service-body">
+          <h3 class="service-name">Graphic Design</h3>
+          <p class="service-desc">Logos, brand identities, marketing collateral and creative assets that make brands unforgettable across every medium.</p>
+          <div class="service-tags">
+            <span>Branding</span><span>Print</span><span>Digital Assets</span><span>Packaging</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-item">
+        <span class="service-num">[06]</span>
+        <div class="service-body">
+          <h3 class="service-name">Marketing Strategy</h3>
+          <p class="service-desc">End-to-end marketing plans built on research and data — giving your brand a clear roadmap to measurable growth.</p>
+          <div class="service-tags">
+            <span>Market Research</span><span>Growth Plans</span><span>Consulting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIX 3: "Why us" — All 6 services, not just portfolio/resume -->
+  <section style="background:var(--gray-1); padding:6rem 3rem; border-top:var(--border); border-bottom:var(--border);">
+    <div class="section-label reveal">[ ALL SERVICES ]</div>
+    <h2 class="section-title reveal reveal-delay-1">Everything we offer.</h2>
+    <div class="feature-grid" style="margin-top:4rem;">
+      <div class="feature-card reveal">
+        <span class="feature-icon">🌐</span>
+        <h4>Portfolio Website</h4>
+        <p>Custom-built portfolio websites that showcase your best work. Mobile-friendly, fast, and built to impress recruiters and clients. From ₹1,000.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <span class="feature-icon">📄</span>
+        <h4>ATS Resume</h4>
+        <p>Professionally written resumes that pass ATS screening bots and land on human desks. Keyword-optimised for your target role. From ₹500.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <span class="feature-icon">📱</span>
+        <h4>Social Media Marketing</h4>
+        <p>Strategic content creation and community management for Instagram, LinkedIn, TikTok, and more. Grow your brand's audience and engagement.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">📣</span>
+        <h4>Ads Management</h4>
+        <p>Data-driven paid campaigns on Google Ads and Meta (Facebook/Instagram) that maximise your ROI and drive qualified leads to your business.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <span class="feature-icon">🎨</span>
+        <h4>Graphic Design</h4>
+        <p>Logo design, brand identities, social media creatives, flyers, and all your visual marketing needs — done with purpose and creativity.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <span class="feature-icon">📊</span>
+        <h4>Marketing Strategy</h4>
+        <p>End-to-end marketing plans built on real research and data, giving your brand or business a clear, actionable roadmap to growth and revenue.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIX 4: Portfolio / Works section — shows all service types -->
+  <section id="works" style="padding-top:6rem;">
+    <div class="section-label reveal">[ WORKS — 06 ]</div>
+    <h2 class="section-title reveal reveal-delay-1">Selected Works.</h2>
+    <div class="portfolio-grid reveal">
+      <div class="portfolio-item">
+        <img src="/static/images/portfolio/portfolio1.jpg" alt="Resume Builder Platform" onerror="this.style.display='none';" />
+        <div class="portfolio-overlay">
+          <h3>Resume Builder Platform</h3>
+          <p>Slick dashboard design for resume creation and templates built for hiring success.</p>
+          <div class="portfolio-tags"><span>Web Development</span><span>UI Design</span></div>
+          <a href="portfolio.html" class="portfolio-btn">View Project</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="/static/images/portfolio/portfolio2.jpg" alt="Portfolio Website" onerror="this.style.display='none';" />
+        <div class="portfolio-overlay">
+          <h3>Portfolio Website</h3>
+          <p>Modern personal brand website with polished UX and mobile-first presentation.</p>
+          <div class="portfolio-tags"><span>Portfolio</span><span>Brand</span></div>
+          <a href="portfolio.html" class="portfolio-btn">View Project</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="/static/images/portfolio/portfolio3.jpg" alt="Social Media Campaign" onerror="this.style.display='none';" />
+        <div class="portfolio-overlay">
+          <h3>Social Media Campaign</h3>
+          <p>Eye-catching creatives and engagement-first content built for social growth.</p>
+          <div class="portfolio-tags"><span>Social Media</span><span>Marketing</span></div>
+          <a href="portfolio.html" class="portfolio-btn">View Project</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="/static/images/portfolio/portfolio4.jpg" alt="Digital Marketing Campaign" onerror="this.style.display='none';" />
+        <div class="portfolio-overlay">
+          <h3>Digital Marketing Campaign</h3>
+          <p>Performance-driven ad funnels and campaigns that generate measurable ROI.</p>
+          <div class="portfolio-tags"><span>Advertising</span><span>Growth</span></div>
+          <a href="portfolio.html" class="portfolio-btn">View Project</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="/static/images/portfolio/portfolio5.jpg" alt="Brand Identity Design" onerror="this.style.display='none';" />
+        <div class="portfolio-overlay">
+          <h3>Brand Identity Design</h3>
+          <p>Premium brand visuals, logos, and marketing assets with a bold creative direction.</p>
+          <div class="portfolio-tags"><span>Graphic Design</span><span>Branding</span></div>
+          <a href="portfolio.html" class="portfolio-btn">View Project</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="/static/images/portfolio/portfolio6.jpg" alt="Growth Strategy Plan" onerror="this.style.display='none';" />
+        <div class="portfolio-overlay">
+          <h3>Growth Strategy Plan</h3>
+          <p>Conversion-led digital strategy built to increase traffic, leads, and revenue.</p>
+          <div class="portfolio-tags"><span>Strategy</span><span>Consulting</span></div>
+          <a href="portfolio.html" class="portfolio-btn">View Project</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="portfolio.html" class="btn-ghost reveal">View all projects →</a>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section style="background:var(--gray-1); padding:6rem 3rem;">
+    <div class="section-label reveal">[ WORK PROCESS ]</div>
+    <h2 class="section-title reveal reveal-delay-1">Our Creative Process.</h2>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-step-num">01</div>
+        <div class="process-step-label">[ STEP 1 ]</div>
+        <h4>Discovery Call</h4>
+        <p>We start with a conversation to understand your goals, brand story, and what success looks like for you. This is where the strategy begins.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="process-step-num">02</div>
+        <div class="process-step-label">[ STEP 2 ]</div>
+        <h4>Creation</h4>
+        <p>Our team designs, builds, and crafts with purpose — every asset, every line of copy, every pixel is intentional and aligned to your goals.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="process-step-num">03</div>
+        <div class="process-step-label">[ STEP 3 ]</div>
+        <h4>Delivery & Growth</h4>
+        <p>We deliver polished work on time and measure performance post-launch — iterating to push results further month over month.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num"><span class="counter" data-target="120" data-suffix="+">0+</span></div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num"><span class="counter" data-target="45" data-suffix="+">0+</span></div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num"><span class="counter" data-target="6" data-suffix="">0</span></div>
+        <div class="stat-label">Services Offered</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num"><span class="counter" data-target="5" data-suffix="★">0</span></div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section>
+    <div class="section-label reveal">[ CLIENT REVIEWS ]</div>
+    <h2 class="section-title reveal reveal-delay-1">What clients say.</h2>
+    <div class="testimonials-track">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Got my resume done in under 24 hours. Applied to 8 companies and got 5 interview calls in the first week. The ATS optimisation is 100% real."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RK</div>
+          <div>
+            <div class="testimonial-name">Rohan Kumar</div>
+            <div class="testimonial-role">Software Engineer at TCS Digital</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"My portfolio website is stunning. Three freelance clients reached out within the first two weeks of it going live. Worth every rupee and more."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PS</div>
+          <div>
+            <div class="testimonial-name">Priya Sharma</div>
+            <div class="testimonial-role">UI/UX Designer, Bangalore</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Their social media strategy doubled our Instagram followers in one month. The ad campaigns they ran brought in real, paying customers. Excellent team."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AM</div>
+          <div>
+            <div class="testimonial-name">Arjun Mehta</div>
+            <div class="testimonial-role">Founder, Nomad Studios</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--gray-1);">
+    <div class="section-label reveal">[ FAQ ]</div>
+    <h2 class="section-title reveal reveal-delay-1">Frequently asked questions.</h2>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-question">What services does Digital Marketing Agency offer? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Our core services are Portfolio Websites (₹1,000) and ATS-Optimised Resumes (₹500). We also offer Social Media Marketing, Ads Management (Google & Meta), Graphic Design, and full Marketing Strategy.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How long does it take to get my resume or portfolio? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Resumes are delivered within 24–48 hours. Portfolio websites take 3–7 days depending on content and complexity. We'll give you an exact timeline when you order.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is the resume really ATS-friendly? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Yes! Our resumes are built using ATS-compliant formats — no tables, no graphics that confuse bots, and keyword-optimised for your target roles. We've helped freshers land interviews at top MNCs.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is your pricing structure? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Resume starts at ₹500 (original ₹1,000 — 50% off) and Portfolio Website starts at ₹1,000 (original ₹2,000 — 50% off). See our <a href="pricing.html" style="color:var(--accent);">Pricing page</a> for full details.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do I get started? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Fill out the form on our <a href="contact.html" style="color:var(--accent);">Contact page</a> or send us a message. We'll get back to you within a few hours to kick things off.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-label">[ LET'S WORK TOGETHER ]</div>
+    <h2 class="section-title">Get in touch.</h2>
+    <p>Ready to land your dream job or grow your brand? Let's build something that actually works.</p>
+    <a href="contact.html" class="btn-dark">Order now →</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Digital Marketing Agency<span style="color:var(--accent);">.</span></a>
+        <p>Portfolio & Resume Building Experts. Get hired faster.</p>
+        <p style="margin-top:1rem;font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.1em;color:var(--gray-3);">HYDERABAD, TELANGANA, IN</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="about.html">Studio</a></li>
+          <li><a href="portfolio.html">Works</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html">Portfolio Website</a></li>
+          <li><a href="services.html">ATS Resume</a></li>
+          <li><a href="services.html">Social Media</a></li>
+          <li><a href="services.html">Ads Management</a></li>
+          <li><a href="services.html">Graphic Design</a></li>
+          <li><a href="services.html">Strategy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="https://x.com" target="_blank">X (Twitter)</a></li>
+          <li><a href="mailto:hello@digitalmarketingagency.com">hello@digitalmarketingagency.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Digital Marketing Agency 2025</span>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="index.html">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/animations.js"></script>
+  <script>
+    fetch('/api/quotes/random')
+      .then(r => r.json())
+      .then(data => {
+        const el = document.getElementById('dynamic-quote');
+        if (el && data.quote) el.textContent = '"' + data.quote + '"';
+      })
+      .catch(() => {});
+  </script>
+  <script>
+    fetch('/auth/me', { credentials: 'include' })
+      .then(res => res.json())
+      .then(data => {
+        const btn = document.getElementById('nav-login-btn');
+        if (data.authenticated && btn) {
+          btn.textContent = 'Logout';
+          btn.href = (data.type === 'admin') ? '/auth/logout' : '/auth/user/logout';
+        }
+      });
+  </script>
+</body>
+</html>
